@@ -22,8 +22,8 @@ body .App {
   display: grid;
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
-  overflow: scroll;
+  grid-gap: 1.2rem;
+  overflow: hidden;
 }
 
 .card {
@@ -46,6 +46,7 @@ body .App {
   border-radius: 16px;
   padding: 8px;
   width: 100%;
+  height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   -ms-grid-row: 1;

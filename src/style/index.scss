@@ -40,9 +40,9 @@ body {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax($card-width, 1fr));
-        grid-gap: 1rem;
+        grid-gap: 1.2rem;
 
-        overflow: scroll;
+        overflow: hidden;
     }
 }
 
@@ -65,6 +65,7 @@ body {
         @include rounded(16px);
         padding: $card-img-pad;
         width: 100%;
+        height: auto;
         box-sizing: border-box;
         
         grid-area: image;
