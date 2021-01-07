@@ -1,0 +1,92 @@
+$card-bg: rgb(243, 228, 22);
+$page-bg: #999;
+
+$han-purple: rgba(94, 43, 255, 1);
+$phlox: rgba(192, 76, 253, 1);
+$hot-pink: rgba(252, 109, 171, 1);
+$cream: rgba(247, 246, 197, 1);
+$beige: rgba(243, 250, 225, 1);
+
+
+$card-width: 300px;
+$card-height: 300px;
+
+$card-margin: 2px;
+$card-img-pad: 8px;
+$card-img-margin-left: 4px;
+$card-font-sz: 12px;
+
+@mixin rounded($amount) {
+    border: 0px solid;
+    border-radius: $amount;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background: $cream;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center;
+
+    .App {
+        box-sizing: border-box;
+        padding: 0.5rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax($card-width, 1fr));
+        grid-gap: 1rem;
+
+        overflow: scroll;
+    }
+}
+
+
+.card {
+    @include rounded(8px);
+    background-color: $beige;
+
+    box-shadow: 4px 4px 0.75rem #999;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "image sname"
+    "image sclass"
+    ;
+
+    img {
+        @include rounded(16px);
+        padding: $card-img-pad;
+        width: 100%;
+        box-sizing: border-box;
+        
+        grid-area: image;
+        align-self: center;
+        justify-self: center;
+    }
+
+    .sname {
+        padding: 2rem;
+        font-size: small;
+        grid-area: sname;
+        align-self: center;
+    }
+
+    .sclass {
+        padding: 2rem;
+        grid-area: sclass;
+        align-self: center;
+        text-transform: capitalize;
+    }
+
+    &:hover {
+        background: darken($color: $beige, $amount: 25%);
+    }
+}

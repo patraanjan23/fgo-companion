@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: #f7f6c5;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  place-content: center;
+}
+
+body .App {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.5rem;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+  overflow: scroll;
+}
+
+.card {
+  border: 0px solid;
+  border-radius: 8px;
+  background-color: #f3fae1;
+  -webkit-box-shadow: 4px 4px 0.75rem #999;
+          box-shadow: 4px 4px 0.75rem #999;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "image sname" "image sclass";
+}
+
+.card img {
+  border: 0px solid;
+  border-radius: 16px;
+  padding: 8px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: image;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.card .sname {
+  padding: 2rem;
+  font-size: small;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: sname;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.card .sclass {
+  padding: 2rem;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: sclass;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-transform: capitalize;
+}
+
+.card:hover {
+  background: #c7e874;
+}
+/*# sourceMappingURL=index.css.map */
