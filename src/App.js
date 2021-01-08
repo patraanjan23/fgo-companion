@@ -1,15 +1,13 @@
-import Card from "./components/card";
-import data from "./data/nice_servant.json"
-function App() {
+import React from "react";
+import LazyCardList from "./components/lazyCardList"
 
-  const cards = data.map(item => item.extraAssets.charaGraph.ascension[1] !== undefined ?
-    <Card key={item.collectionNo} data={item}/> : 
-    null
-  )
+import data from "./data/nice_servant.json"
+
+function App() {
 
   return (
     <div className="App">
-      {cards}
+        <LazyCardList data={data}/>
     </div>
   );
 }

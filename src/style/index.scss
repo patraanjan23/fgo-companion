@@ -8,7 +8,7 @@ $cream: rgba(247, 246, 197, 1);
 $beige: rgba(243, 250, 225, 1);
 
 
-$card-width: 300px;
+$card-width: 350px;
 $card-height: 300px;
 
 $card-margin: 2px;
@@ -34,7 +34,7 @@ body {
     grid-template-columns: 1fr;
     place-content: center;
 
-    .App {
+    .CardList {
         box-sizing: border-box;
         padding: 0.5rem;
         width: 100%;
@@ -51,7 +51,7 @@ body {
     @include rounded(8px);
     background-color: $beige;
 
-    box-shadow: 4px 4px 0.75rem #999;
+    box-shadow: 4px 4px 1rem #999;
     
     display: grid;
     grid-template-columns: 1fr 1fr;

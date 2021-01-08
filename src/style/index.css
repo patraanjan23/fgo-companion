@@ -13,15 +13,15 @@ body {
   place-content: center;
 }
 
-body .App {
+body .CardList {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0.5rem;
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 1.2rem;
   overflow: hidden;
 }
@@ -30,15 +30,16 @@ body .App {
   border: 0px solid;
   border-radius: 8px;
   background-color: #f3fae1;
-  -webkit-box-shadow: 4px 4px 0.75rem #999;
-          box-shadow: 4px 4px 0.75rem #999;
+  -webkit-box-shadow: 4px 4px 1rem #999;
+          box-shadow: 4px 4px 1rem #999;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: "image sname" "image sclass";
+      grid-template-areas: "image sname"
+ "image sclass";
 }
 
 .card img {
